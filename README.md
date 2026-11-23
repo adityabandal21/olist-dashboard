@@ -1,5 +1,7 @@
 # Olist E-Commerce Analytics Dashboard
 
+**Live demo:** https://olist-dashboard1.streamlit.app/
+
 Interactive business analytics dashboard built on the Brazilian Olist e-commerce dataset (100K+ orders, 2016-2018) using SQL, Plotly, and Streamlit.
 
 ## Key metrics

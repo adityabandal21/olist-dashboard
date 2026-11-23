@@ -31,15 +31,22 @@ Interactive business analytics dashboard built on the Brazilian Olist e-commerce
     python3.11 -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
-    kaggle datasets download -d olistbr/brazilian-ecommerce -p data/ --unzip
+
+The nine dataset CSV files are already included in `data/`, so no separate download is needed.
 
 ## Run
 
     python -m streamlit run app.py
 
+On first launch, the app builds a local SQLite database (`data/olist.db`) from the CSV files, which can take a short while. Later launches reuse it.
+
+To refresh the data from the original source, download it from Kaggle:
+
+    kaggle datasets download -d olistbr/brazilian-ecommerce -p data/ --unzip
+
 ## Key findings
-- Revenue grew 3x from Jan 2017 to Nov 2017 before seasonal dip
-- Only 3% of customers make repeat purchases — typical for marketplace model
+- Revenue grew 3x from Jan 2017 to Nov 2017 before a seasonal dip
+- Only 3% of customers make repeat purchases, which is typical for a marketplace model
 - Sao Paulo sellers generate 40%+ of total platform revenue
 - Health & beauty and watches are top revenue categories
 - Higher priced categories tend to have lower review scores
